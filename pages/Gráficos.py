@@ -1,11 +1,9 @@
 import streamlit as st
 import pandas as pd
 import os
-import time
 import numpy as np
 import plotly.graph_objects as go
-import io
-import openpyxl
+
 
 st.write("# :bar_chart: Gráficos de Operações DayTrade")
 
