@@ -3,7 +3,7 @@ pandas
 os
 time
 numpy
-plotly.graph_objects
+plotly
 io
 openpyxl
 
