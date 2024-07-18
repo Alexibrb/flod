@@ -4,6 +4,7 @@ import os
 import io
 import time
 
+
 def spinner():
     with st.spinner('Aguarde... carregando a página'):
         # Simule uma tarefa de longa duração
@@ -42,6 +43,8 @@ def create_xlsx_file(dataframes):
 
     buffer.seek(0)
     return buffer
+
+
 
 def estilos():
     st.markdown("""
