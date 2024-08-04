@@ -20,8 +20,6 @@ with st.sidebar:
     cria_sidebar()
 
 spinner()
-
-
 saldo = 0
 Meta = 10000000
 if os.path.exists('parametros.csv'):
@@ -76,6 +74,7 @@ if saldo >= Meta:
 
         if btn_resetr:
             os.remove('resultados.csv')
+            st.rerun()
             
 
     with col2:
@@ -107,6 +106,7 @@ if os.path.exists('parametros.csv'):
                 data2 = pd.concat([data2, df2], ignore_index=True)
                 data2.to_csv('resultados.csv', index=False)
                 st.success("# Cadastro Efetuado com sucesso!!!!")
+                st.rerun()
                 
     else:
         with st.form('resultado', clear_on_submit=True):
