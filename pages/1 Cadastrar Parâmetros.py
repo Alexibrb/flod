@@ -39,7 +39,7 @@ if os.path.exists('parametros.csv'):
         btn_resetp1 = st.button("Alterar Parâmetros", type="primary")
         if btn_resetp1:
             os.remove('parametros.csv')
-            st.experimental_rerun()
+            
 
 
 
@@ -50,7 +50,7 @@ else:
         capitalinicial = st.number_input("Digite o Capital")
         meta = st.number_input("Digite a meta mensal")
         nopm = st.number_input("Digite o número de operações no mês", 1)
-        dnop = st.number_input("Digite os dias não operados", )
+        dnop = st.number_input("Digite os dias não operados", 1)
         btn_cadastro = st.form_submit_button("Cadastrar")
 
     if btn_cadastro:
@@ -64,7 +64,7 @@ else:
         tabela1 = df.to_csv("parametros.csv", index=False)
 
         st.success("# Dados cadastros com sucesso!")
-        st.experimental_rerun()
+        
 
     else:
         st.error("# Insira os dados")
